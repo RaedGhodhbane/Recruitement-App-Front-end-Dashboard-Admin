@@ -5,6 +5,7 @@ import { CandidatesListComponent } from './candidates-list/candidates-list.compo
 import { RecruitersListComponent } from './recruiters-list/recruiters-list.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UsersComponent } from './users/users.component';
+import { ContactComponent } from './contact/contact.component';
 
 export const routes: Routes = [
     {path:'', component: LayoutComponent},
@@ -12,5 +13,6 @@ export const routes: Routes = [
     {path:'candidatesList', component: CandidatesListComponent},
     {path:'recruitersList', component: RecruitersListComponent},
     {path: 'profileAdmin', component: ProfileComponent},
-    {path:'usersList', component: UsersComponent}
+    {path:'usersList', component: UsersComponent},
+    {path:'contactMessages', component:ContactComponent}
 ];
