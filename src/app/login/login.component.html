@@ -22,13 +22,13 @@
                         <p class="fs-5 mb-0">Login to your account</p>
                     </div>
                     <div class="card-body">
-                        <form action="https://wrraptheme.com/templates/lucid/hr/bs5/dist/index.html">
+                        <form [formGroup]="loginForm" (ngSubmit)="login()">
                             <div class="form-floating mb-1">
-                                <input type="email" class="form-control" placeholder="name@example.com">
+                                <input type="email" class="form-control" placeholder="name@example.com" formControlName="email">
                                 <label>Email address</label>
                             </div>
                             <div class="form-floating">
-                                <input type="password" class="form-control" placeholder="Password">
+                                <input type="password" class="form-control" placeholder="Password" formControlName="password">
                                 <label>Password</label>
                             </div>
                             <div class="form-check my-3">
