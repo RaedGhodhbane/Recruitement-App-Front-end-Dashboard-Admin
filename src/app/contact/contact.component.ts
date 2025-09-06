@@ -19,10 +19,11 @@ export class ContactComponent {
   }
 
   getAllUserMessages() {
+    console.log("messages " , this.messages);
     this.adminService.getAllMessagesContact().subscribe(
       (res:any) => {
         this.messages = res;
-        console.log(res);
+        console.log("message " , this.messages);
       }
     )
   }
