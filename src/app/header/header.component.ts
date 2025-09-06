@@ -15,6 +15,6 @@ export class HeaderComponent {
 
     onLogout(): void {
     this.authService.logout();
-    this.router.navigate(['/login']); // Redirection après déconnexion
+    this.router.navigate(['/login']);
   }
 }
