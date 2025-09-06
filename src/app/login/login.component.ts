@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../services/authentication.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -38,24 +39,24 @@ export class LoginComponent {
 
     this.authenticationService.loginAdmin(credentials).subscribe({
       next: (res: any) => {
-        localStorage.setItem('token', res.token);
-        localStorage.setItem('user', JSON.stringify(res.user));
+
         try {
           const payload = JSON.parse(atob(res.token.split('.')[1]));
           const role = payload.authorities?.[0];
-          if (role) {
-            localStorage.setItem('role', role);
-          } else {
-            console.warn('Aucun rôle trouvé dans le token');
+          if (role !== 'ROLE_ADMIN') {
+            this.errorMessage = "Accès refusé : seul un administrateur peut se connecter.";
+            return;
           }
-          setTimeout(() => {
+            localStorage.setItem('token', res.token);
+            localStorage.setItem('user', JSON.stringify(res.user));
+            localStorage.setItem('role', role);
+
             this.router.navigate(['/']).then(() => {
-    location.reload(); 
-  });
-         
-          }, 0);
+            location.reload(); 
+          });
         } catch (e) {
           console.error('Erreur lors du décodage du token JWT', e);
+          this.errorMessage = 'Token invalide, impossible de vérifier les droits.';
         }
 
       },
