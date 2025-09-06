@@ -8,9 +8,15 @@ import { Observable } from 'rxjs';
 export class AdminService {
 
   private apiURL = "http://localhost:8082/admin";
-  private apiURL2 = "http://localhost:8082/contact";
   constructor(private http: HttpClient) { }
 
+  getAdminById(idAdmin:any) {
+    return this.http.get(`${this.apiURL}/${idAdmin}`);
+  }
+
+  updateAdminInfo(admin:any,idAdmin:any) {
+    return this.http.put(`${this.apiURL}/updateadmin/${idAdmin}`, admin);
+  }
   desactivateCandidate(id:number) : Observable<void> {
     return this.http.put<void>(`${this.apiURL}/candidates/${id}/desactivate`, {});
   }
@@ -28,6 +34,10 @@ export class AdminService {
   }
 
   getAllMessagesContact() {
-    return this.http.get(`${this.apiURL2}/messages`)
+    return this.http.get(`${this.apiURL}/contact/messages`);
+  }
+
+  changePassword(adminId: number, data: any): Observable<any> {
+    return this.http.put(`${this.apiURL}/${adminId}/change-password`, data);
   }
 }
