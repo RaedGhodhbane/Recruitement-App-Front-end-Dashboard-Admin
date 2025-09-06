@@ -6,13 +6,14 @@ import { RecruitersListComponent } from './recruiters-list/recruiters-list.compo
 import { ProfileComponent } from './profile/profile.component';
 import { UsersComponent } from './users/users.component';
 import { ContactComponent } from './contact/contact.component';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
-    {path:'', component: LayoutComponent},
+    {path:'', component: LayoutComponent, canActivate:[authGuard]},
     {path:'login', component: LoginComponent},
-    {path:'candidatesList', component: CandidatesListComponent},
-    {path:'recruitersList', component: RecruitersListComponent},
-    {path: 'profileAdmin', component: ProfileComponent},
-    {path:'usersList', component: UsersComponent},
-    {path:'contactMessages', component:ContactComponent}
+    {path:'candidatesList', component: CandidatesListComponent, canActivate: [authGuard]},
+    {path:'recruitersList', component: RecruitersListComponent, canActivate: [authGuard]},
+    {path: 'profileAdmin', component: ProfileComponent, canActivate: [authGuard]},
+    {path:'usersList', component: UsersComponent, canActivate: [authGuard]},
+    {path:'contactMessages', component:ContactComponent, canActivate: [authGuard]}
 ];
