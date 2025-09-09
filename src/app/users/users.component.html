@@ -1,308 +1,318 @@
 <div id="layout" class="theme-cyan">
+  <div id="wrapper">
+    <app-sidebar></app-sidebar>
 
-    <div id="wrapper">
-        
-        <app-sidebar></app-sidebar>
-
-        <div id="main-content">
-            <div class="container-fluid">
-
-                <div class="block-header py-lg-4 py-3">
-                    <div class="row g-3">
-                        <div class="col-md-6 col-sm-12">
-                            <h2 class="m-0 fs-5"><a href="javascript:void(0);" class="btn btn-sm btn-link ps-0 btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>Users</h2>
-                            <ul class="breadcrumb mb-0">
-                                <li class="breadcrumb-item"><a href="index.html">Lucid</a></li>
-                                <li class="breadcrumb-item active">Users</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6 col-sm-12 text-md-end">
-                            <div class="d-inline-flex text-start">
-                                <div class="me-2">
-                                    <h6 class="mb-0"><i class="fa fa-user"></i> 1,784</h6>
-                                    <small>Visitors</small>
-                                </div>
-                                <span id="bh_visitors"></span>
-                            </div>
-                            <div class="d-inline-flex text-start ms-lg-3 me-lg-3 ms-1 me-1">
-                                <div class="me-2">
-                                    <h6 class="mb-0"><i class="fa fa-globe"></i> 325</h6>
-                                    <small>Visits</small>
-                                </div>
-                                <span id="bh_visits"></span>
-                            </div>
-                            <div class="d-inline-flex text-start">
-                                <div class="me-2">
-                                    <h6 class="mb-0"><i class="fa fa-comments"></i> 13</h6>
-                                    <small>Chats</small>
-                                </div>
-                                <span id="bh_chats"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row clearfix">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h6 class="card-title">List</h6>
-                                <ul class="header-dropdown">
-                                    <li><button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#AddUser">Add User</button></li>
-                                </ul>
-                            </div>
-                            <div class="card-body">
-                                <table id="app_user" class="table table-hover mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th></th>
-                                            <th></th>
-                                            <th>Created Date</th>
-                                            <th>Role</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="width45">
-                                                <img src="assets/images/xs/avatar1.jpg" class="rounded-circle width35" alt="">
-                                            </td>
-                                            <td>
-                                                <h6 class="mb-0">Marshall Nichols</h6>
-                                                <span>marshall-n</span>
-                                            </td>
-                                            <td><span class="badge bg-danger">Super Admin</span></td>
-                                            <td>24 Jun, 2015</td>
-                                            <td>CEO and Founder</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="assets/images/xs/avatar2.jpg" class="rounded-circle width35" alt="">
-                                            </td>
-                                            <td>
-                                                <h6 class="mb-0">Susie Willis</h6>
-                                                <span>sussie-w</span>
-                                            </td>
-                                            <td><span class="badge bg-info">Admin</span></td>
-                                            <td>28 Jun, 2015</td>
-                                            <td>Team Lead</td>
-                                            <td>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash-o"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="assets/images/xs/avatar3.jpg" class="rounded-circle width35" alt="">
-                                            </td>
-                                            <td>
-                                                <h6 class="mb-0">Debra Stewart</h6>
-                                                <span>debra</span>
-                                            </td>
-                                            <td><span class="badge bg-info">Admin</span></td>
-                                            <td>21 July, 2015</td>
-                                            <td>Team Lead</td>
-                                            <td>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash-o"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="assets/images/xs/avatar4.jpg" class="rounded-circle width35" alt="">
-                                            </td>
-                                            <td>
-                                                <h6 class="mb-0">Erin Gonzales</h6>
-                                                <span>Erinonzales</span>
-                                            </td>
-                                            <td><span class="badge bg-secondary">Employee</span></td>
-                                            <td>21 July, 2015</td>
-                                            <td>Web Developer</td>
-                                            <td>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash-o"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="assets/images/xs/avatar3.jpg" class="rounded-circle width35" alt="">
-                                            </td>
-                                            <td>
-                                                <h6 class="mb-0">Ava Alexander</h6>
-                                                <span>alexander</span>
-                                            </td>
-                                            <td><span class="badge bg-success">HR Admin</span></td>
-                                            <td>21 July, 2015</td>
-                                            <td>HR</td>
-                                            <td>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash-o"></i></button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+    <div id="main-content">
+      <div class="container-fluid">
+        <div class="row clearfix">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title">List</h6>
+                <ul class="header-dropdown">
+                  <li>
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#AddUser"
+                    >
+                      Add User
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <table id="app_user" class="table table-hover mb-0">
+                  <thead>
+                    <tr>
+                      <th>Image</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Created Date</th>
+                      <th>Role</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let user of users | paginate: {itemsPerPage:5, currentPage:p}">
+                      <td class="width45">
+                        <img
+                          src="assets/images/xs/avatar1.jpg"
+                          class="rounded-circle width35"
+                          alt=""
+                        />
+                      </td>
+                      <td>
+                        <h6>{{ user.name }} {{ user.firstName }}</h6>
+                      </td>
+                      <td>{{ user.email }}</td>
+                      <td>24 Jun, 2015</td>
+                      <td>{{ user.role }}</td>
+                      <td class="text-center">
+                        <button
+                          class="btn btn-sm btn-info me-1"
+                          (click)="viewUser(user.id)"
+                        >
+                          <i class="fa fa-eye"></i>
+                        </button>
+                        <button
+                          class="btn btn-sm btn-danger"
+                          (click)="deleteUser(user.id)"
+                        >
+                          <i class="fa fa-trash-o"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- Pagination controls -->
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+              </div>
             </div>
+          </div>
         </div>
-
+      </div>
     </div>
+  </div>
 
-    <!-- Default Size -->
-    <div class="modal fade" id="AddUser" tabindex="-1" aria-labelledby="AddUser" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h6 class="title" id="defaultModalLabel">Add User</h6>
-                </div>
-                <div class="modal-body">
-                    <div class="row g-2">
-                        <div class="col-md-4 col-sm-12">
-                            <input type="text" class="form-control" placeholder="First Name *">
-                        </div>
-                        <div class="col-md-4 col-sm-12">
-                            <input type="text" class="form-control" placeholder="Last Name">
-                        </div>
-                        <div class="col-md-4 col-sm-12">
-                            <input type="text" class="form-control" placeholder="Email ID *">
-                        </div>
-                        <div class="col-md-4 col-sm-12">
-                            <input type="text" class="form-control" placeholder="Username *">
-                        </div>
-                        <div class="col-md-4 col-sm-12">
-                            <input type="text" class="form-control" placeholder="Password">
-                        </div>
-                        <div class="col-md-4 col-sm-12">
-                            <input type="text" class="form-control" placeholder="Confirm Password">
-                        </div>
-                        <div class="col-md-4 col-sm-12">
-                            <input type="text" class="form-control" placeholder="Mobile No">
-                        </div>
-                        <div class="col-md-4 col-sm-12">
-                            <select class="form-select" aria-label="Default select example">
-                                <option>Select Role Type</option>
-                                <option>Super Admin</option>
-                                <option>Admin</option>
-                                <option>Employee</option>
-                            </select>
-                        </div>
-                        <div class="col-md-4 col-sm-12">
-                            <input type="text" class="form-control" placeholder="Employee ID *">
-                        </div>
-                        <div class="col-12">
-                            <h6 class="mt-4">Module Permission</h6>
-                            <div class="table-responsive">
-                                <table class="table table-striped mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>Read</th>
-                                            <th>Write</th>
-                                            <th>Delete</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Super Admin</td>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox" checked>
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox" checked>
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox" checked>
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Admin</td>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox" checked>
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox" checked>
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Employee</td>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox" checked>
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>HR Admin</td>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox" checked>
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox" checked>
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Add</button>
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
+  <!-- Default Size -->
+  <div
+    class="modal fade"
+    id="AddUser"
+    tabindex="-1"
+    aria-labelledby="AddUser"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="title" id="defaultModalLabel">Add User</h6>
+        </div>
+        <div class="modal-body">
+          <div class="row g-2">
+            <div class="col-md-4 col-sm-12">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="First Name *"
+              />
             </div>
+            <div class="col-md-4 col-sm-12">
+              <input type="text" class="form-control" placeholder="Last Name" />
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Email ID *"
+              />
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Username *"
+              />
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <input type="text" class="form-control" placeholder="Password" />
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Confirm Password"
+              />
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <input type="text" class="form-control" placeholder="Mobile No" />
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <select class="form-select" aria-label="Default select example">
+                <option>Select Role Type</option>
+                <option>Super Admin</option>
+                <option>Admin</option>
+                <option>Employee</option>
+              </select>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Employee ID *"
+              />
+            </div>
+            <div class="col-12">
+              <h6 class="mt-4">Module Permission</h6>
+              <div class="table-responsive">
+                <table class="table table-striped mb-0">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Read</th>
+                      <th>Write</th>
+                      <th>Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Super Admin</td>
+                      <td>
+                        <label class="fancy-checkbox">
+                          <input
+                            class="checkbox-tick"
+                            type="checkbox"
+                            name="checkbox"
+                            checked
+                          />
+                          <span></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="fancy-checkbox">
+                          <input
+                            class="checkbox-tick"
+                            type="checkbox"
+                            name="checkbox"
+                            checked
+                          />
+                          <span></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="fancy-checkbox">
+                          <input
+                            class="checkbox-tick"
+                            type="checkbox"
+                            name="checkbox"
+                            checked
+                          />
+                          <span></span>
+                        </label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Admin</td>
+                      <td>
+                        <label class="fancy-checkbox">
+                          <input
+                            class="checkbox-tick"
+                            type="checkbox"
+                            name="checkbox"
+                            checked
+                          />
+                          <span></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="fancy-checkbox">
+                          <input
+                            class="checkbox-tick"
+                            type="checkbox"
+                            name="checkbox"
+                            checked
+                          />
+                          <span></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="fancy-checkbox">
+                          <input
+                            class="checkbox-tick"
+                            type="checkbox"
+                            name="checkbox"
+                          />
+                          <span></span>
+                        </label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Employee</td>
+                      <td>
+                        <label class="fancy-checkbox">
+                          <input
+                            class="checkbox-tick"
+                            type="checkbox"
+                            name="checkbox"
+                            checked
+                          />
+                          <span></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="fancy-checkbox">
+                          <input
+                            class="checkbox-tick"
+                            type="checkbox"
+                            name="checkbox"
+                          />
+                          <span></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="fancy-checkbox">
+                          <input
+                            class="checkbox-tick"
+                            type="checkbox"
+                            name="checkbox"
+                          />
+                          <span></span>
+                        </label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>HR Admin</td>
+                      <td>
+                        <label class="fancy-checkbox">
+                          <input
+                            class="checkbox-tick"
+                            type="checkbox"
+                            name="checkbox"
+                            checked
+                          />
+                          <span></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="fancy-checkbox">
+                          <input
+                            class="checkbox-tick"
+                            type="checkbox"
+                            name="checkbox"
+                            checked
+                          />
+                          <span></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="fancy-checkbox">
+                          <input
+                            class="checkbox-tick"
+                            type="checkbox"
+                            name="checkbox"
+                          />
+                          <span></span>
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Add</button>
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
     </div>
-
+  </div>
 </div>
