@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 export class AdminService {
 
   private apiURL = "http://localhost:8082/admin";
+  private apiURL2 = "http://localhost:8082/candidate";
+  private apiURL3 = "http://localhost:8082/recruiter";
   constructor(private http: HttpClient) { }
 
   getAdminById(idAdmin:any) {
@@ -39,5 +41,13 @@ export class AdminService {
 
   changePassword(adminId: number, data: any): Observable<any> {
     return this.http.put(`${this.apiURL}/${adminId}/change-password`, data);
+  }
+
+  getAllCandidates():Observable<any[]> {
+    return this.http.get<any[]>(this.apiURL2 + '/candidates');
+  }
+
+  getAllRecruiters():Observable<any[]> {
+    return this.http.get<any[]>(this.apiURL3 + '/recruiters');
   }
 }
